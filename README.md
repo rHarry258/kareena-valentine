@@ -97,10 +97,10 @@
 
     <h1>💘 Kareena, will you be my Valentine?</h1>
 
-    <!-- Cute Minion with hearts before clicking YES -->
+    <!-- Local cute minion with hearts -->
     <img class="minion-cute"
-         src="https://tenor.com/view/minions-minion-in-love-gif-8647532" 
-         alt="Cute Minion in love with hearts around it"> <!-- Source: Minion in love GIF from Tenor  [oai_citation:1‡Tenor](https://tenor.com/view/minions-minion-in-love-gif-8647532?utm_source=chatgpt.com) -->
+         src="./minion-hearts.gif"
+         alt="Cute minion with hearts around it">
 
     <button id="yesBtn">YES 💖</button>
     <button id="noBtn">NO 😢</button>
@@ -113,11 +113,11 @@
     You are mine forever 😌✨<br><br>
     — Harsimran 💘<br><br>
 
-    <!-- Minions hugging GIF after YES -->
+    <!-- Local minions hugging GIF -->
     <img class="minion-hug"
          id="minionHug"
-         src="https://tenor.com/view/minions-hug-cuddle-love-gif-9709470" 
-         alt="Minions hugging in love"> <!-- Minions hugging GIF from GIF site  [oai_citation:2‡Tenor](https://tenor.com/baQcd.gif?utm_source=chatgpt.com) -->
+         src="./minions-hug.gif"
+         alt="Cute minions hugging each other">
 </div>
 
 <audio id="music" loop>
