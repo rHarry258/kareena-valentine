@@ -78,15 +78,15 @@
         display: none;
     }
 
-    .minion-hug {
-        display: none;
-        margin-top: 20px;
-        width: 250px;
+    .minion-cute {
+        width: 200px;
+        margin: 15px 0;
     }
 
-    .cute-guy {
-        width: 180px;
-        margin: 15px 0;
+    .minion-hug {
+        display: none;
+        width: 250px;
+        margin-top: 20px;
     }
 </style>
 </head>
@@ -97,10 +97,10 @@
 
     <h1>💘 Kareena, will you be my Valentine?</h1>
 
-    <!-- Cute guy with hearts before YES -->
-    <img class="cute-guy" 
-         src="https://media.giphy.com/media/5xaOcLwEvFOizxHVyVy/giphy.gif" 
-         alt="Cute guy with hearts">
+    <!-- Cute Minion with hearts before clicking YES -->
+    <img class="minion-cute"
+         src="https://tenor.com/view/minions-minion-in-love-gif-8647532" 
+         alt="Cute Minion in love with hearts around it"> <!-- Source: Minion in love GIF from Tenor  [oai_citation:1‡Tenor](https://tenor.com/view/minions-minion-in-love-gif-8647532?utm_source=chatgpt.com) -->
 
     <button id="yesBtn">YES 💖</button>
     <button id="noBtn">NO 😢</button>
@@ -114,10 +114,10 @@
     — Harsimran 💘<br><br>
 
     <!-- Minions hugging GIF after YES -->
-    <img class="minion-hug" 
-         id="minionHug" 
-         src="https://tenor.com/view/minions-hug-cuddle-love-gif-9709470.gif" 
-         alt="Minions hugging"> <!-- Source from GIF site  [oai_citation:0‡Tenor](https://tenor.com/view/minions-hug-despicable-me-love-hugging-gif-9709470?utm_source=chatgpt.com) -->
+    <img class="minion-hug"
+         id="minionHug"
+         src="https://tenor.com/view/minions-hug-cuddle-love-gif-9709470" 
+         alt="Minions hugging in love"> <!-- Minions hugging GIF from GIF site  [oai_citation:2‡Tenor](https://tenor.com/baQcd.gif?utm_source=chatgpt.com) -->
 </div>
 
 <audio id="music" loop>
@@ -141,7 +141,7 @@
         yesBtn.style.padding = size/2 + "px";
         yesBtn.style.boxShadow = "0 0 50px rgba(255,0,90,1)";
 
-        if(size > 200){
+        if (size > 200) {
             mainBox.style.display = "none";
             finalMessage.style.display = "block";
             minionHug.style.display = "block";
