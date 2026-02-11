@@ -1,5 +1,4 @@
 # kareena will you be my valentine
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -29,7 +28,14 @@
     }
 
     h1 {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+    .from {
+        margin-top: 20px;
+        font-style: italic;
+        color: #ff4d6d;
+        font-size: 18px;
     }
 
     button {
@@ -71,6 +77,11 @@
         text-align: center;
         display: none;
     }
+
+    .minion {
+        width: 150px;
+        margin-top: 20px;
+    }
 </style>
 </head>
 
@@ -78,12 +89,21 @@
 
 <div class="box" id="mainBox">
     <h1>💘 Kareena, will you be my Valentine?</h1>
+
+    <img class="minion" 
+    src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" 
+    alt="Cute Minion">
+
     <button id="yesBtn">YES 💖</button>
     <button id="noBtn">NO 😢</button>
+
+    <div class="from">— From Harsimran 💖</div>
 </div>
 
 <div class="final" id="finalMessage">
-    💍 YAYYYY Kareena!!! You are mine forever 💖
+    💍 YAYYYY Kareena!!! 💖<br><br>
+    You are mine forever 😌✨<br><br>
+    — Harsimran 💘
 </div>
 
 <audio id="music" loop>
