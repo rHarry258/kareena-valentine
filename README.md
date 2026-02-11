@@ -78,9 +78,15 @@
         display: none;
     }
 
-    .minion {
-        width: 150px;
+    .minion-hug {
+        display: none;
         margin-top: 20px;
+        width: 250px;
+    }
+
+    .cute-guy {
+        width: 180px;
+        margin: 15px 0;
     }
 </style>
 </head>
@@ -88,11 +94,13 @@
 <body>
 
 <div class="box" id="mainBox">
+
     <h1>💘 Kareena, will you be my Valentine?</h1>
 
-    <img class="minion" 
-    src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" 
-    alt="Cute Minion">
+    <!-- Cute guy with hearts before YES -->
+    <img class="cute-guy" 
+         src="https://media.giphy.com/media/5xaOcLwEvFOizxHVyVy/giphy.gif" 
+         alt="Cute guy with hearts">
 
     <button id="yesBtn">YES 💖</button>
     <button id="noBtn">NO 😢</button>
@@ -103,7 +111,13 @@
 <div class="final" id="finalMessage">
     💍 YAYYYY Kareena!!! 💖<br><br>
     You are mine forever 😌✨<br><br>
-    — Harsimran 💘
+    — Harsimran 💘<br><br>
+
+    <!-- Minions hugging GIF after YES -->
+    <img class="minion-hug" 
+         id="minionHug" 
+         src="https://tenor.com/view/minions-hug-cuddle-love-gif-9709470.gif" 
+         alt="Minions hugging"> <!-- Source from GIF site  [oai_citation:0‡Tenor](https://tenor.com/view/minions-hug-despicable-me-love-hugging-gif-9709470?utm_source=chatgpt.com) -->
 </div>
 
 <audio id="music" loop>
@@ -116,25 +130,28 @@
     const music = document.getElementById("music");
     const mainBox = document.getElementById("mainBox");
     const finalMessage = document.getElementById("finalMessage");
+    const minionHug = document.getElementById("minionHug");
 
     let size = 18;
 
     yesBtn.addEventListener("click", function() {
+        music.play();
         size += 20;
         yesBtn.style.fontSize = size + "px";
         yesBtn.style.padding = size/2 + "px";
-        music.play();
+        yesBtn.style.boxShadow = "0 0 50px rgba(255,0,90,1)";
 
         if(size > 200){
             mainBox.style.display = "none";
             finalMessage.style.display = "block";
+            minionHug.style.display = "block";
             startHearts();
         }
     });
 
     noBtn.addEventListener("mouseover", function() {
-        const x = Math.random() * (window.innerWidth - 100);
-        const y = Math.random() * (window.innerHeight - 50);
+        const x = Math.random() * (window.innerWidth - 150);
+        const y = Math.random() * (window.innerHeight - 100);
         noBtn.style.left = x + "px";
         noBtn.style.top = y + "px";
     });
@@ -149,10 +166,7 @@
             heart.style.fontSize = (Math.random() * 30 + 20) + "px";
             document.body.appendChild(heart);
 
-            setTimeout(() => {
-                heart.remove();
-            }, 4000);
-
+            setTimeout(() => heart.remove(), 4000);
         }, 200);
     }
 </script>
